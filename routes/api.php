@@ -24,4 +24,4 @@ Route::post('/feed/store',[FeedController::class,'store'])->middleware('auth:san
 Route::post('/feed/likepost/{feed_id}',[FeedController::class,'likepost'])->middleware('auth:sanctum');
 Route::get('/feeds',[FeedController::class,'index'])->middleware('auth:sanctum');
 Route::post('/feed/comment/{feed_id}',[FeedController::class,'comment'])->middleware('auth:sanctum');
-Route::post('/feed/comments/{feed_id}',[FeedController::class,'getComments'])->middleware('auth:sanctum');
+Route::get('/feed/comments/{feed_id}',[FeedController::class,'getComments'])->middleware('auth:sanctum');
